@@ -22,9 +22,6 @@ sensitive_post_parameters_m = method_decorator(
 )
 
 
-
-
-
 class UserDetailsView(RetrieveUpdateAPIView):
     """
     Reads and updates UserModel fields
@@ -115,3 +112,6 @@ class PasswordChangeView(GenericAPIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response({"detail": _("New password has been saved.")})
+
+
+
